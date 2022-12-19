@@ -12,7 +12,10 @@
   --social-items-bg: rgba(255, 255, 255, 0.1);
   --team-icons: #afb1b8;
 }
-
+:hover,
+:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 * {
   padding: 0;
   margin: 0;
@@ -70,6 +73,13 @@ body {
 .link:focus,
 .link:active {
   color: var(--logo-color);
+}
+.link::after {
+  background: var(--logo-ftr);
+  border-radius: 2px;
+  position: absolute;
+  width: 53px;
+  height: 4px;
 }
 
 .contact-style {
@@ -255,7 +265,34 @@ body {
   display: flex;
   align-items: center;
 }
-
+.work-desc {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  left: 210x;
+  top: 1455px;
+}
+.work-text {
+  color: var(--logo-ftr);
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.dap {
+  padding: 27px 90px;
+}
+.mba {
+  padding: 27px 110px;
+}
+.gs {
+  padding: 27px 94px;
+}
 .cards-style {
   display: flex;
   column-gap: 30px;
@@ -503,19 +540,40 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
-
 .projects-pf {
-  display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
 }
 .projects-pf:hover {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+.projects-pf:hover .cards-overlay {
+  transform: translateY(0);
+}
+.cards-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 372px;
+  height: 293px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cards-desc {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--logo-ftr);
+  padding: 49px 45px 49px 24px;
 }
 .img-pf {
   vertical-align: bottom;
@@ -530,4 +588,12 @@ body {
   display: flex;
   align-items: center;
   padding: 0 24px 20px;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
+    skew(40deg, 40deg);
 }

@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <title>Studio</title>
   </head>
@@ -28,7 +28,7 @@
         <nav>
           <ul class="social-links">
             <li>
-              <a class="link" href="agencja.html">Agencja</a>
+              <a class="link" href="agencja.html" target="_blank">Agencja</a>
             </li>
             <li>
               <a class="link" href="portfolio.html" target="_blank"
@@ -36,7 +36,7 @@
               >
             </li>
             <li>
-              <a class="link" href="kontakt.html">Kontakt</a>
+              <a class="link" href="kontakt.html" target="_blank">Kontakt</a>
             </li></ul>
         </nav>
         <ul class="contact-style">
@@ -59,7 +59,8 @@
             <h1 class="head1">
               EFEKTYWNE ROZWIĄZANIA<br />DLA WASZEGO BIZNESU
             </h1>
-            <button type="button" class="first-button">Zamów usługę</button>
+            <button type="button" class="first-button" data-modal-open>Zamów usługę</button>
+            <div class="modal-is-hidden" data-modal data-modal-close>X</div>
           </div>
         </section>
         <section class="section">
@@ -104,6 +105,8 @@
           <h2 class="header2-style ">Czym się zajmujemy</h2>
           <ul class="work-spaces">
             <li class="work-area">
+           <div class="work-desc">
+            <p class="work-text dap">APLIKACJE KOMPUTEROWE</p></div>
               <img
                 src="images/box1.jpg"
                 width="370"
@@ -112,6 +115,8 @@
               />
             </li>
             <li class="work-area">
+              <div class="work-desc">
+                <p class="work-text mba">APLIKACJE MOBILNE</p></div>
               <img
                 src="images/box2.jpg"
                 width="370"
@@ -120,6 +125,8 @@
               />
             </li>
             <li class="work-area">
+              <div class="work-desc">
+                <p class="work-text gs">ROZWIĄZANIA GRAFICZNE</p></div>
               <img
                 src="images/box3.jpg"
                 width="370"
@@ -268,5 +275,8 @@
             </ul>
           </div></div>
         </footer>
+        <script src=".js/modal.js">
+        </script>
   </body>
+
 </html>
