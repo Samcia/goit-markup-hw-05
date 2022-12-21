@@ -128,8 +128,7 @@ body {
   display: inline-flex;
 }
 .tel:hover,
-.tel:focus,
-.tel:active {
+.tel:focus {
   color: var(--logo-color);
 }
 
@@ -348,10 +347,10 @@ body {
   fill: var(--team-icons);
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 }
 .items-mates:hover {
   background-color: var(--logo-color);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
