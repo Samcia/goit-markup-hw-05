@@ -528,6 +528,7 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: pointer;
 }
 .social-items-pf {
   fill: var(--logo-ftr);
