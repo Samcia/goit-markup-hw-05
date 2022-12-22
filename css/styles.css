@@ -93,12 +93,12 @@ body {
   list-style: none;
   color: var(--paragraph-color);
   column-gap: 20px;
+  margin-left: auto;
 }
 .contact-style a:hover svg {
   fill: var(--logo-color);
 }
 .icons-mail {
-  margin-left: 325px;
   margin-right: 10px;
   display: inline-flex;
 }
@@ -504,6 +504,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 250ms ease-in-out;
 }
 .is-hidden {
   pointer-events: none;
@@ -511,6 +512,7 @@ body {
   opacity: 0;
   transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
     skew(40deg, 40deg);
+  cursor: pointer;
 }
 .modal {
   width: 528px;
